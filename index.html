@@ -1,0 +1,431 @@
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuzgXriSU3B_wC9u_aF3vAt51JSth8J64vYw8Jfoi3jG0JvJUuQmCGP2DcEAwHzdYY4_g6acimfAtr-4xAJo_JXgDwoQkeYlc-70a32tKRMxH8hjkM3UQiY_D6YEZRt3hQlUpYETRne_NyhuuefEss3cJjeXFzZBYZFG8YM9YKDXuwOUmmGVCVfShU9oVr/s1600/Add%20a%20heading%20%281%29.png" style="display: block; padding: 1em 0px; text-align: center;"><img alt="" border="0" data-original-height="131" data-original-width="131" height="131" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuzgXriSU3B_wC9u_aF3vAt51JSth8J64vYw8Jfoi3jG0JvJUuQmCGP2DcEAwHzdYY4_g6acimfAtr-4xAJo_JXgDwoQkeYlc-70a32tKRMxH8hjkM3UQiY_D6YEZRt3hQlUpYETRne_NyhuuefEss3cJjeXFzZBYZFG8YM9YKDXuwOUmmGVCVfShU9oVr/w174-h131/Add%20a%20heading%20(1).png" width="174" /></a></div>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+    <title>TikTok Trending Title Generator – SEO ফ্রেন্ডলি টাইটেল তৈরি করুন</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"></link>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&amp;display=swap" rel="stylesheet"></link>
+    
+    <style>
+        :root {
+            --primary-color: #f92a68;
+            --secondary-color: #00e0d8;
+            --bg-dark: #1e1e3f;
+            --bg-medium: #2a2a52;
+            --bg-light: #4a4a7a;
+            --text-light: #f0f0f5;
+            --text-medium: #a0a0c0;
+            --border-radius: 12px;
+            --transition-speed: 0.3s;
+        }
+        .ai-tool-body {
+            font-family: 'Hind Siliguri', sans-serif; background-color: var(--bg-dark);
+            color: var(--text-light); padding: 10px;
+        }
+        .ai-tool-container {
+            max-width: 800px; margin: 30px auto; background: var(--bg-medium);
+            padding: 30px; border-radius: var(--border-radius); border: 1px solid var(--bg-light);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+        }
+        .input-group { margin-bottom: 25px; }
+        .input-group label {
+            display: flex; align-items: center; font-size: 1.1em;
+            font-weight: 600; margin-bottom: 12px; color: var(--text-light);
+        }
+        #videoConcept {
+            width: 100%; box-sizing: border-box; height: 100px; padding: 15px;
+            border-radius: var(--border-radius); border: 2px solid var(--bg-light);
+            background-color: var(--bg-dark); color: var(--text-light); font-size: 1em;
+            font-family: 'Hind Siliguri', sans-serif; resize: vertical;
+        }
+        .category-selector {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .category-btn {
+            background-color: var(--bg-dark); border: 2px solid var(--bg-light);
+            border-radius: var(--border-radius); padding: 15px; cursor: pointer;
+            transition: all var(--transition-speed) ease;
+            
+            /* --- লেআউট সেন্টারিং এর জন্য পরিবর্তন --- */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .category-btn svg { width: 32px; height: 32px; fill: var(--text-medium); margin-bottom: 8px; transition: all var(--transition-speed) ease; }
+        .category-btn span { font-size: 0.9em; font-weight: 500; color: var(--text-medium); transition: color var(--transition-speed) ease; text-align: center;}
+        .category-btn:hover { border-color: var(--secondary-color); transform: translateY(-3px); }
+        .category-btn.active { border-color: var(--primary-color); background-color: rgba(249, 42, 104, 0.1); }
+        .category-btn.active svg { fill: var(--primary-color); }
+        .category-btn.active span { color: var(--primary-color); font-weight: 600; }
+        
+        .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        
+        .custom-select-wrapper { position: relative; }
+        .custom-select {
+            width: 100%; padding: 15px; appearance: none; background-color: var(--bg-dark);
+            color: var(--text-light); border: 2px solid var(--bg-light); border-radius: var(--border-radius);
+            font-size: 1em; font-family: 'Hind Siliguri', sans-serif; cursor: pointer;
+        }
+        .custom-select-wrapper::after { content: '▼'; font-size: 12px; color: var(--primary-color); position: absolute; right: 15px; top: 50%; transform: translateY(-50%); pointer-events: none; }
+        .slider-wrapper { display: flex; align-items: center; gap: 15px; }
+        .slider { -webkit-appearance: none; width: 100%; height: 8px; background: var(--bg-dark); outline: none; border-radius: 4px; }
+        .slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 20px; height: 20px; background: var(--primary-color); border-radius: 50%; cursor: pointer; }
+        .slider-value { background-color: var(--bg-dark); color: var(--secondary-color); padding: 10px; border-radius: var(--border-radius); text-align: center; font-weight: 700; font-size: 1.2em; min-width: 40px; }
+        #generateBtn {
+            width: 100%; padding: 18px; margin-top: 15px; font-size: 1.4em; font-weight: 700;
+            font-family: 'Hind Siliguri', sans-serif; border: none; border-radius: var(--border-radius); cursor: pointer;
+            background: var(--primary-color); color: var(--text-light); transition: all var(--transition-speed);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .loader { display: none; margin: 30px auto; border: 5px solid var(--bg-light); border-top: 5px solid var(--primary-color); border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        #resultContainer { display: none; padding-top: 25px; border-top: 1px dashed var(--bg-light); margin-top: 30px; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .result-item { background: var(--bg-dark); border-radius: var(--border-radius); margin-bottom: 20px; border: 1px solid var(--bg-light); overflow: hidden; }
+        .result-item h3 { font-size: 1.2em; font-weight: 600; color: var(--secondary-color); margin: 0; padding: 15px 20px; background-color: rgba(0, 224, 216, 0.1); }
+        .result-content { padding: 20px; color: var(--text-light); font-size: 1.1em; position: relative; line-height: 1.8; }
+        .result-content p { margin: 0; white-space: pre-wrap; word-wrap: break-word; }
+        .copy-btn { position: absolute; top: 50%; right: 20px; transform: translateY(-50%); background: var(--bg-light); color: var(--text-light); border: none; padding: 8px 15px; border-radius: 8px; cursor: pointer; font-size: 0.9em; transition: all var(--transition-speed); }
+        @media (max-width: 768px) { .category-selector { grid-template-columns: repeat(3, 1fr); } .options-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 480px) { .category-selector { grid-template-columns: repeat(2, 1fr); } .copy-btn { top: 15px; right: 15px; transform: none; } .result-content { padding-top: 55px; } }
+    </style>
+</head>
+<body class="ai-tool-body">
+<div class="ai-tool-container">
+    <div class="input-group"><label>ভিডিওর ধারণা বা বিষয়</label><textarea id="videoConcept" placeholder="যেমন: নতুন কেনা একটি স্মার্টফোনের আনবক্সিং"></textarea></div>
+    <div class="input-group"><label>ক্যাটেগরি নির্বাচন করুন</label><div class="category-selector" id="categorySelector">
+        <div class="category-btn" data-category="কমেডি"><svg viewbox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path></svg><span>কমেডি</span></div>
+        <div class="category-btn" data-category="নৃত্য"><svg viewbox="0 0 24 24"><path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"></path></svg><span>নৃত্য</span></div>
+        <div class="category-btn" data-category="গেমিং"><svg viewbox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 9 18.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path></svg><span>গেমিং</span></div>
+        <div class="category-btn" data-category="প্রাণী"><svg viewbox="0 0 24 24"><path d="M21.58 16.09l-1.17-1.17c-0.12-0.12-0.26-0.18-0.42-0.18s-0.3 0.06-0.42 0.18l-1.17 1.17c-0.24 0.24-0.24 0.61 0 0.85l1.17 1.17c0.12 0.12 0.26 0.18 0.42 0.18s0.3-0.06 0.42-0.18l1.17-1.17c0.24-0.24 0.24-0.61 0-0.85zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.79 0 3.45-0.47 4.9-1.32-1.32-0.78-2.22-2.18-2.22-3.82 0-2.48 2.02-4.5 4.5-4.5 0.32 0 0.64 0.04 0.95 0.1C20.7 7.68 16.79 4 12 4z"></path></svg><span>প্রাণী</span></div>
+        <div class="category-btn" data-category="খাবার"><svg viewbox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7z"></path></svg><span>খাবার</span></div>
+        <div class="category-btn" data-category="শিক্ষামূলক"><svg viewbox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm-1 8.41V17l-6-3.25V9l6 3.41zm2 0L19 9v4.75L13 17V11.41z"></path></svg><span>শিক্ষা</span></div>
+        <div class="category-btn" data-category="প্রযুক্তি"><svg viewbox="0 0 24 24"><path d="M7 2v20h10V2H7zm5 18c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM16 14H8V4h8v10z"></path></svg><span>প্রযুক্তি</span></div>
+        <div class="category-btn" data-category="ভ্রমণ"><svg viewbox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"></path></svg><span>ভ্রমণ</span></div>
+        <div class="category-btn" data-category="ফ্যাশন"><svg viewbox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.04 2.21 11.53 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .53.21 1.04.59 1.41l9 9c.39.39 1.02.39 1.41 0l7-7c.39-.39.39-1.02 0-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path></svg><span>ফ্যাশন</span></div>
+        <div class="category-btn" data-category="সৌন্দর্য"><svg viewbox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg><span>সৌন্দর্য</span></div>
+        <div class="category-btn" data-category="ফিটনেস"><svg viewbox="0 0 24 24"><path d="M12 6.5c2.49 0 4.5 2.01 4.5 4.5S14.49 15.5 12 15.5 7.5 13.49 7.5 11 9.51 6.5 12 6.5zM12 4C7.03 4 3 8.03 3 13c0 2.21.9 4.21 2.34 5.66L12 24l6.66-5.34C20.1 17.21 21 15.21 21 13c0-4.97-4.03-9-9-9z"></path></svg><span>ফিটনেস</span></div>
+        <div class="category-btn" data-category="শিল্প ও DIY"><svg viewbox="0 0 24 24"><path d="M20.71 5.63l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-3.12 3.12-1.93-1.93-1.41 1.41 1.42 1.42L3 16.29V21h4.71l8.02-8.02 1.42 1.42 1.41-1.41-1.93-1.93 3.12-3.12c.39-.39.39-1.02 0-1.41zM6.92 19L5 17.08l8.06-8.06 1.92 1.92L6.92 19z"></path></svg><span>শিল্প/DIY</span></div>
+    </div></div>
+    <div class="options-grid">
+        <div class="input-group"><label>সুরের ধরণ</label><div class="custom-select-wrapper"><select class="custom-select" id="toneSelectorInput"><option value="মজাদার ও হাস্যরসাত্মক">মজাদার</option><option value="তথ্যমূলক">তথ্যমূলক</option><option value="অনুপ্রেরণামূলক">অনুপ্রেরণামূলক</option><option value="আবেগঘন">আবেগঘন</option><option value="আশ্চর্যজনক">আশ্চর্যজনক</option><option value="প্রচারণামূলক">প্রচারণামূলক</option></select></div></div>
+        <div class="input-group"><label>হ্যাশট্যাগের সংখ্যা</label><div class="slider-wrapper"><input class="slider" id="hashtagSlider" max="30" min="5" type="range" value="8" /><span class="slider-value" id="sliderValue">8</span></div></div>
+    </div>
+    <button id="generateBtn"></button>
+    <div class="loader" id="loader"></div>
+    <div id="resultContainer"></div>
+</div>
+
+<script>
+    const videoConceptInput = document.getElementById('videoConcept');
+    const categorySelector = document.getElementById('categorySelector');
+    const toneSelectorInput = document.getElementById('toneSelectorInput');
+    const hashtagSlider = document.getElementById('hashtagSlider');
+    const sliderValue = document.getElementById('sliderValue');
+    const generateBtn = document.getElementById('generateBtn');
+    const loader = document.getElementById('loader');
+    const resultContainer = document.getElementById('resultContainer');
+    let selectedCategory = '';
+    const API_KEY = 'AIzaSyC4d9YsFZS9Budg4u8rURN6_BLCXPdKcWs'; 
+    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_KEY}`;
+    
+    window.addEventListener('load', () => { generateBtn.innerHTML = '<span>কন্টেন্ট তৈরি করুন</span>' });
+    categorySelector.addEventListener('click', (e) => {
+        const targetBtn = e.target.closest('.category-btn');
+        if (!targetBtn) return;
+        document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+        targetBtn.classList.add('active');
+        selectedCategory = targetBtn.dataset.category;
+    });
+    hashtagSlider.addEventListener('input', (e) => sliderValue.textContent = e.target.value);
+    
+    generateBtn.addEventListener('click', async () => {
+        if (!videoConcept.value.trim() || !selectedCategory) {
+            alert('অনুগ্রহ করে "ভিডিওর ধারণা" এবং একটি "ক্যাটেগরি" নির্বাচন করুন।'); return;
+        }
+        generateBtn.disabled = true;
+        generateBtn.innerHTML = 'জেনারেট হচ্ছে...';
+        loader.style.display = 'block';
+        resultContainer.style.display = 'none';
+
+        const prompt = `You are a professional Bengali TikTok content creator. Your task is to generate viral, SEO-friendly content.
+            **User Inputs:**
+            - Topic: "${videoConcept.value}"
+            - Category: "${selectedCategory}"
+            - Tone: "${toneSelectorInput.value}"
+            - Hashtag Count: ${hashtagSlider.value}
+            **Critical Instructions:**
+            1. Generate 3 complete, unique posts. Each post MUST be a single string containing: (a) a short, engaging, SEO-friendly caption in Bengali (1-2 lines ideal for TikTok), and (b) EXACTLY ${hashtagSlider.value} relevant Bengali hashtags appended at the end.
+            2. Generate a SEPARATE list of suggested hashtags. This list MUST also contain EXACTLY ${hashtagSlider.value} relevant Bengali hashtags as a single string.
+            **Required JSON Output Format (Strictly follow):**
+            {"seo_captions_with_hashtags": ["ক্যাপশন ১... #ট্যাগ১ #ট্যাগ২", "ক্যাপশন ২... #ট্যাগ৩ #ট্যাগ৪", "ক্যাপশন ৩... #ট্যাগ৫ #ট্যাগ৬"], "suggested_hashtags": "#প্রস্তাবিত১ #প্রস্তাবিত২"}`;
+        
+        try {
+            const response = await fetch(API_URL, { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }) });
+            const responseData = await response.json();
+            if (!response.ok) throw new Error(responseData.error?.message || 'API Error');
+            const responseText = responseData.candidates?.[0]?.content?.parts?.[0]?.text;
+            if (!responseText) throw new Error('AI থেকে কোনো উত্তর পাওয়া যায়নি।');
+            const jsonMatch = responseText.match(/{[\s\S]*}/);
+            if (!jsonMatch) throw new Error("AI সঠিক ফরম্যাটে উত্তর দেয়নি।");
+            renderResults(JSON.parse(jsonMatch[0]));
+        } catch (error) {
+            alert(`একটি ত্রুটি ঘটেছে: ${error.message}`);
+        } finally {
+            generateBtn.disabled = false;
+            generateBtn.innerHTML = '<span>আবার তৈরি করুন</span>';
+            loader.style.display = 'none';
+        }
+    });
+
+    function renderResults(data) {
+        let htmlContent = '';
+        if (data.seo_captions_with_hashtags) {
+            data.seo_captions_with_hashtags.forEach((post, index) => {
+                htmlContent += `<div class="result-item"><h3>অপশন ${index + 1}</h3><div class="result-content"><p id="post-${index}">${post}</p><button class="copy-btn" onclick="copyToClipboard('post-${index}')">কপি</button></div></div>`;
+            });
+        }
+        if (data.suggested_hashtags) {
+            htmlContent += `<div class="result-item"><h3>প্রস্তাবিত হ্যাশট্যাগসমূহ</h3><div class="result-content"><p id="suggested-hashtags">${data.suggested_hashtags}</p><button class="copy-btn" onclick="copyToClipboard('suggested-hashtags')">কপি</button></div></div>`;
+        }
+        resultContainer.innerHTML = htmlContent;
+        resultContainer.style.display = 'block';
+    }
+
+    function copyToClipboard(elementId) {
+        const text = document.getElementById(elementId).innerText;
+        navigator.clipboard.writeText(text).then(() => alert('কন্টেন্ট কপি করা হয়েছে!'));
+    }
+</script>
+</body>
+</html>
+
+
+
+
+<html lang="bn">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+    <title>AI টিকটক ক্যাপশন ও হ্যাশট্যাগ জেনারেটর: মুহূর্তে ভাইরাল কনটেন্ট!</title>
+    
+    <!-- Google Fonts for Bengali -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"></link>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&amp;display=swap" rel="stylesheet"></link>
+
+    <style>
+        :root {
+            --primary-color: #f92a68;
+            --secondary-color: #00e0d8;
+            --bg-color: #1a1d2e;
+            --text-color: #e0e0e0;
+            --heading-color: #ffffff;
+            --container-bg: #2a2a52;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .seo-content-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: var(--container-bg);
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        h1, h2, h3 {
+            color: var(--heading-color);
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: var(--secondary-color);
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: var(--secondary-color);
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        
+        strong, b {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin: 20px auto;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(249, 42, 104, 0.4);
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        .faq-item {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            h3 { font-size: 1.2em; }
+            .seo-content-container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="seo-content-container">
+        
+        <h1>AI টিকটক ক্যাপশন ও হ্যাশট্যাগ জেনারেটর: মুহূর্তে ভাইরাল কনটেন্ট তৈরি করুন!</h1>
+
+        <p>আপনি কি একজন টিকটক ক্রিয়েটর? ঘণ্টার পর ঘণ্টা খাটাখাটনি করে একটি অসাধারণ ভিডিও তৈরি করার পর কি আপনার মনে এই প্রশ্নগুলো আসে?<br /> "কী ক্যাপশন দেবো?"<br /> "কোন হ্যাশট্যাগ ব্যবহার করলে ভিডিও ভাইরাল হবে?"<br /> "কীভাবে আরও বেশি মানুষের কাছে পৌঁছানো যায়?"</p>
+        <p>যদি আপনার উত্তর "হ্যাঁ" হয়, তবে আপনি সঠিক জায়গায় এসেছেন। বাংলাদেশের হাজারো টিকটক ক্রিয়েটরদের মতো আপনিও হয়তো সঠিক ক্যাপশন এবং হ্যাশট্যাগের অভাবে আপনার ভিডিওর প্রকৃতศักยতা (potential) অনুযায়ী ভিউ এবং লাইক পাচ্ছেন না। কিন্তু আর চিন্তা নেই! আপনার সব সমস্যার সমাধান নিয়ে এসেছে আমাদের অত্যাধুনিক <strong>AI টিকটক ক্যাপশন ও হ্যাশট্যাগ জেনারেটর</strong>।</p>
+        <p>এই শক্তিশালী টুলটি ব্যবহার করে আপনি মাত্র কয়েক সেকেন্ডের মধ্যেই আপনার ভিডিওর জন্য সেরা, আকর্ষণীয় এবং ভাইরাল হওয়ার মতো বাংলা ক্যাপশন ও হ্যাশট্যাগ খুঁজে নিতে পারবেন। চলুন, বিস্তারিত জেনে নেওয়া যাক কীভাবে এই টুলটি আপনার টিকটক যাত্রাকে বদলে দিতে পারে।</p>
+
+        <h2>কেন টিকটক ক্যাপশন ও হ্যাশট্যাগ এত গুরুত্বপূর্ণ?</h2>
+        <p>অনেকেই মনে করেন, টিকটকে শুধু ভিডিও ভালো হলেই চলে। কিন্তু বাস্তবতা ভিন্ন। একটি ভালো ভিডিওর সাথে সঠিক ক্যাপশন এবং হ্যাশট্যাগের সমন্বয় না ঘটলে, আপনার সেরা কাজটিও হাজারো ভিডিওর ভিড়ে হারিয়ে যেতে পারে।</p>
+
+        <h3>অ্যালগরিদমের মন জয়</h3>
+        <p>টিকটক অ্যালগরিদম হ্যাশট্যাগের মাধ্যমে আপনার ভিডিওর বিষয়বস্তু বুঝতে পারে। যখন আপনি <strong>#foodvlog</strong> বা <strong>#funnyvideo</strong> এর মতো প্রাসঙ্গিক হ্যাশট্যাগ ব্যবহার করেন, টিকটক তখন সেইসব দর্শকদের কাছে আপনার ভিডিও পৌঁছে দেয় যারা এই ধরনের কনটেন্ট দেখতে আগ্রহী। আমাদের <strong>ভাইরাল হ্যাশট্যাগ জেনারেটর</strong> আপনাকে দেবে সবচেয়ে ট্রেন্ডি এবং প্রাসঙ্গিক হ্যাশট্যাগ।</p>
+
+        <h3>দর্শকের সাথে সংযোগ স্থাপন</h3>
+        <p>একটি আকর্ষণীয় ক্যাপশন আপনার ভিডিওর গল্প বলে এবং দর্শকদের সাথে একটি भावनात्मक সংযোগ তৈরি করে। একটি প্রশ্নমূলক বা মজাদার ক্যাপশন দর্শকদের কমেন্ট করতে উৎসাহিত করে, যা আপনার ভিডিওর এনগেজমেন্ট বাড়ায়। বেশি এনগেজমেন্ট মানেই বেশি রিচ।</p>
+
+        <h3>For You Page (FYP)-এ পৌঁছানোর চাবিকাঠি</h3>
+        <p>সঠিক হ্যাশট্যাগ এবং উচ্চ এনগেজমেন্ট—এই দুইটি হলো আপনার ভিডিওকে மில்லியன் கணக்கான মানুষের For You Page (FYP)-এ পৌঁছে দেওয়ার মূল চাবিকাঠি। আমাদের টুলটি আপনাকে এই দুইটি লক্ষ্য অর্জনেই সরাসরি সাহায্য করবে।</p>
+
+        <h2>আমাদের AI টিকটক জেনারেটর: আপনার কনটেন্ট তৈরির নতুন সঙ্গী</h2>
+        <p>বাজারে অনেক টুল থাকলেও আমাদের AI জেনারেটরটি বিশেষভাবে বাংলাদেশী ক্রিয়েটরদের জন্য তৈরি করা হয়েছে। এটি শুধু সাধারণ ক্যাপশন বা হ্যাশট্যাগ দেয় না, বরং আপনার প্রতিটি প্রয়োজন মাথায় রেখে কাস্টমাইজড রেজাল্ট প্রদান করে।</p>
+        
+        <h3>এর সেরা ফিচারগুলো হলো:</h3>
+        <ul>
+            <li><strong>বিষয়ভিত্তিক ফলাফল:</strong> আপনি শুধু আপনার ভিডিওর টপিক (যেমন: "বিরিয়ানি রান্না" বা "নতুন ডান্স চ্যালেঞ্জ") লিখবেন, আর বাকি কাজ AI-এর উপর ছেড়ে দিন।</li>
+            <li><strong>ক্যাটেগরি সিলেকশন:</strong> খাবার, কমেডি, ভ্রমণ, গেমিং, ফ্যাশনসহ টিকটকের জনপ্রিয় সব ক্যাটেগরি থেকে আপনার ভিডিওর সঠিক ধরণটি বেছে নেওয়ার সুযোগ।</li>
+            <li><strong>সুরের ধরণ নির্ধারণ:</strong> আপনার ভিডিওটি কি মজাদার, অনুপ্রেরণামূলক নাকি আবেগঘন? আপনি ক্যাপশনের সুরও নিয়ন্ত্রণ করতে পারবেন।</li>
+            <li><strong>হ্যাশট্যাগ স্লাইডার:</strong> আপনার ভিডিওর জন্য ঠিক কতগুলো হ্যাশট্যাগ প্রয়োজন? ৫টি নাকি ৩০টি? স্লাইডার ব্যবহার করে নিজের ইচ্ছামত সংখ্যা নির্ধারণ করুন।</li>
+            <li><strong>SEO-ফ্রেন্ডলি ক্যাপশন:</strong> আমাদের AI আপনাকে এমন ক্যাপশন দেবে যা অতিরিক্ত লম্বা নয়, পড়তে আকর্ষণীয় এবং টিকটক সার্চের জন্য অপ্টিমাইজ করা।</li>
+        </ul>
+        <p>এই সবকিছু মিলিয়ে, আমাদের <strong>বিনামূল্যে টিকটক টুল</strong> আপনার কনটেন্ট তৈরির পুরো প্রক্রিয়াকে সহজ এবং ফলপ্রসূ করে তুলবে।</p>
+        
+        <div class="center-text">
+            <!-- গুরুত্বপূর্ণ: এখানে আপনার টুলের পেজের সঠিক লিঙ্ক দিন -->
+            <a class="cta-button" href="#">এখনি বিনামূল্যে টুলটি ব্যবহার করুন</a>
+        </div>
+        
+        <h2>কিভাবে আমাদের টুলটি ব্যবহার করবেন? (ধাপে ধাপে গাইড)</h2>
+        <p>আমাদের টুলটি ব্যবহার করা অবিশ্বাস্যরকম সহজ। মাত্র চারটি ধাপে আপনি আপনার পরবর্তী ভাইরাল ভিডিওর জন্য প্রস্তুত হয়ে যাবেন।</p>
+        <ol>
+            <li><strong>ধাপ ১: ভিডিওর ধারণা দিন:</strong> টেক্সট বক্সে আপনার ভিডিওর বিষয়বস্তু সহজ বাংলায় লিখুন। যত বিস্তারিত লিখবেন, ফলাফল তত ভালো আসবে।</li>
+            <li><strong>ধাপ ২: ক্যাটেগরি ও সুর বাছুন:</strong> নিচে থাকা সুন্দর আইকনগুলো থেকে আপনার ভিডিওর ক্যাটেগরি (যেমন: প্রযুক্তি) সিলেক্ট করুন এবং ড্রপডাউন থেকে আপনার পছন্দের সুর (যেমন: তথ্যমূলক) বেছে নিন।</li>
+            <li><strong>ধাপ ৩: হ্যাশট্যাগের সংখ্যা নির্ধারণ করুন:</strong> স্লাইডারটি টেনে আপনার প্রয়োজনীয় হ্যাশট্যাগের সংখ্যা (৫ থেকে ৩০ এর মধ্যে) সেট করুন।</li>
+            <li><strong>ধাপ ৪: "কন্টেন্ট তৈরি করুন" বাটনে ক্লিক করুন:</strong> ব্যস! কয়েক সেকেন্ডের মধ্যেই আপনার স্ক্রিনে ভেসে উঠবে একাধিক আকর্ষণীয় ক্যাপশন এবং একটি আলাদা প্রস্তাবিত হ্যাশট্যাগের তালিকা।</li>
+        </ol>
+
+        <h2>শুধু জেনারেটর নয়, এটি আপনার ভাইরাল হওয়ার কৌশল</h2>
+        <p>এই টুলটি শুধু আপনাকে তৈরি করা কনটেন্টই দেবে না, বরং আপনাকে একজন ভালো কনটেন্ট স্ট্র্যাটেজিস্ট হতেও সাহায্য করবে। নিচে কিছু প্রো-টিপস দেওয়া হলো:</p>
+        <ul>
+            <li><strong>সঠিক ইনপুট, সেরা আউটপুট:</strong> AI-কে যত পরিষ্কারভাবে আপনার ভিডিওর বিষয় বোঝাতে পারবেন, সে তত ভালো এবং প্রাসঙ্গিক ফলাফল দেবে।</li>
+            <li><strong>সেরা অপশনটি বেছে নিন:</strong> আমরা আপনাকে ৩টি ভিন্ন ক্যাপশনের অপশন দিই। আপনার ভিডিওর সাথে যেটি সবচেয়ে বেশি মানানসই, সেটি বেছে নিন অথবা নিজের মতো করে একটু পরিবর্তন করে নিন।</li>
+            <li><strong>মিক্স এবং ম্যাচ করুন:</strong> আমরা যে "প্রস্তাবিত হ্যাশট্যাগসমূহ" বক্সটি দিই, সেখান থেকে কিছু হ্যাশট্যাগ নিয়ে আপনার ক্যাপশনের হ্যাশট্যাগের সাথে মিশিয়ে ব্যবহার করতে পারেন।</li>
+            <li><strong>ট্রেন্ডের সাথে থাকুন:</strong> টিকটক সবসময় ট্রেন্ডের উপর চলে। আমাদের টুল আপনাকে বর্তমান ট্রেন্ডিং হ্যাশট্যাগ খুঁজে পেতে সাহায্য করলেও, আপনার নিজেরও FYP-তে আসা নতুন ট্রেন্ডগুলোর দিকে নজর রাখা উচিত।</li>
+        </ul>
+        
+        <h2>প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী (FAQ)</h2>
+        <div class="faq-item">
+            <h3>প্রশ্ন ১: এই টুলটি কি সম্পূর্ণ বিনামূল্যে ব্যবহার করা যায়?</h3>
+            <p><strong>উত্তর:</strong> হ্যাঁ, আমাদের AI টিকটক ক্যাপশন ও হ্যাশট্যাগ জেনারেটরটি সকল ব্যবহারকারীর জন্য ১০০% বিনামূল্যে।</p>
+        </div>
+        <div class="faq-item">
+            <h3>প্রশ্ন ২: আমি দিনে কতবার এই টুল ব্যবহার করতে পারবো?</h3>
+            <p><strong>উত্তর:</strong> আপনি যতবার খুশি, ততবার এই টুল ব্যবহার করতে পারবেন। এর কোনো সীমাবদ্ধতা নেই।</p>
+        </div>
+        <div class="faq-item">
+            <h3>প্রশ্ন ৩: এটি কি শুধুমাত্র বাংলা ক্যাপশনের জন্য কাজ করে?</h3>
+            <p><strong>উত্তর:</strong> হ্যাঁ, বর্তমানে আমাদের টুলটি বিশেষভাবে <strong>বাংলা টিকটক ক্যাপশন</strong> এবং হ্যাশট্যাগের জন্য সেরা ফলাফল দেওয়ার জন্য তৈরি করা হয়েছে।</p>
+        </div>
+        <div class="faq-item">
+            <h3>প্রশ্ন ৪: এই টুলে দেওয়া আমার ভিডিওর তথ্য কি নিরাপদ?</h3>
+            <p><strong>উত্তর:</strong> অবশ্যই। আমরা আপনার গোপনীয়তাকে সম্মান করি। আপনার দেওয়া কোনো তথ্য আমাদের সার্ভারে জমা রাখা হয় না। প্রতিটি সেশন পুরোপুরি নিরাপদ।</p>
+        </div>
+        
+        <h2>শেষ কথা</h2>
+        <p>টিকটকে সাফল্য পাওয়ার জন্য এখন আর অনুমানের উপর নির্ভর করার দিন শেষ। স্মার্ট টুল ব্যবহার করে ডেটা-ভিত্তিক সিদ্ধান্ত নেওয়ার সময় এসেছে। আমাদের <strong>AI টিকটক ক্যাপশন ও হ্যাশট্যাগ জেনারেটর</strong> আপনার সময় বাঁচাবে, চিন্তা কমাবে এবং আপনার কনটেন্টকে সঠিক দর্শকের কাছে পৌঁছে দিয়ে আপনার চ্যানেলকে দ্রুত এগিয়ে নিয়ে যেতে সাহায্য করবে।</p>
+        
+        <div class="center-text">
+            <p>তাহলে আর দেরি কেন? এখনই আপনার ভিডিওর বিষয় লিখুন এবং দেখুন কীভাবে আর্টিফিশিয়াল ইন্টেলিজেন্স আপনার জন্য ভাইরাল হওয়ার পথ তৈরি করে দেয়!</p>
+            <!-- গুরুত্বপূর্ণ: এখানে আপনার টুলের পেজের সঠিক লিঙ্ক দিন -->
+            <a class="cta-button" href="#">ভাইরাল কনটেন্ট তৈরি শুরু করুন!</a>
+        </div>
+        
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
